@@ -1,8 +1,8 @@
 async function getSpecies(species){
     footerP("Fetching species")
     
-    const textSpecies = await rawSpecies.text()
     const rawSpecies = await fetch(`./data/species/species.h`)
+    const textSpecies = await rawSpecies.text()
     return await regexSpecies(textSpecies, species)
 }
 
