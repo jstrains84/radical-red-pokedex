@@ -550,4 +550,4 @@ window.addEventListener('popstate', async () => {
 })
 
 
-useBackup()
+fetchData()
