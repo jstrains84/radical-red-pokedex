@@ -42,7 +42,7 @@ async function getTutorLearnsets(species){
 }
 
 async function getEvolution(species){
-    const rawEvolution = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/Evolution%20Table.c`)
+    const rawEvolution = await fetch(`./data/species/Evolution%20Table.c`)
     const textEvolution = await rawEvolution.text()
 
     return await regexEvolution(textEvolution, species)
@@ -56,14 +56,14 @@ async function getForms(species){
 }
 
 async function getEggMovesLearnsets(species){
-    const rawEggMoves = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/Egg_Moves.c`)
+    const rawEggMoves = await fetch(`./data/species/Egg_Moves.c`)
     const textEggMoves = await rawEggMoves.text()
 
     return await regexEggMovesLearnsets(textEggMoves, species)
 }
 
 async function getSprite(species){
-    const rawSprite = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/Front_Pic_Table.c`)
+    const rawSprite = await fetch(`./data/species/Front_Pic_Table.c`)
     const textSprite = await rawSprite.text()
 
     return await regexSprite(textSprite, species)
