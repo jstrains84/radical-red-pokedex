@@ -18,9 +18,8 @@ async function getLevelUpLearnsets(species){
     const textLevelUpLearnsets = await rawLevelUpLearnsets.text()
 
     
-    const textLevelUpLearnsetsPointers = await rawLevelUpLearnsetsPointers.text()
-
     const rawLevelUpLearnsetsPointers = await fetch(`./data/species/Learnsets.c`)
+const textLevelUpLearnsetsPointers = await rawLevelUpLearnsetsPointers.text()
     const levelUpLearnsetsConversionTable = await getLevelUpLearnsetsConversionTable(textLevelUpLearnsetsPointers, species)
 
 
