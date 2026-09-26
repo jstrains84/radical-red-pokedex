@@ -28,14 +28,14 @@ async function getLevelUpLearnsets(species){
 }
 
 async function getTMHMLearnsets(species){
-    const rawTMHMLearnsets = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/TM_Tutor_Tables.c`)
+    const rawTMHMLearnsets = await fetch(`./data/species/TM_Tutor_Tables.c`)
     const textTMHMLearnsets = await rawTMHMLearnsets.text()
 
     return await regexTMHMLearnsets(textTMHMLearnsets, species, "gTMHMMoves", "gMoveTutorMoves")
 }
 
 async function getTutorLearnsets(species){
-    const rawTutorLearnsets = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/TM_Tutor_Tables.c`)
+    const rawTutorLearnsets = await fetch(`./data/species/TM_Tutor_Tables.c`)
     const textTutorLearnsets = await rawTutorLearnsets.text()
 
     return await regexTutorLearnsets(textTutorLearnsets, species, "gMoveTutorMoves", "gTMHMMoves")
