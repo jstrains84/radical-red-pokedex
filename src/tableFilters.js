@@ -249,7 +249,8 @@ async function setFilters(){
     })
 
     createFilterGroup(["Mega", "Alolan", "Galarian", "Hisuian", "Seviian"], "Form", [speciesFilterList, locationsFilterList])
-    createFilterGroup(createFilterArray(["type"], moves), "Type", [speciesFilterList, movesFilterList, locationsFilterList])
+    createFilterGroup(createFilterArray(["type1", "type2"], species), "Type", [speciesFilterList, locationsFilterList])
+createFilterGroup(createFilterArray(["type"], moves), "Type", [movesFilterList])
     createFilterGroup(createFilterArray(["split"], moves), "Split", [movesFilterList])
     createFilterGroup(createFilterArray(["flags"], moves), "Flag", [movesFilterList])
     createFilterGroup(createFilterArray(["item1", "item2"], species), "Item", [speciesFilterList, locationsFilterList])
