@@ -70,7 +70,7 @@ async function getSprite(species){
 }
 
 async function getReplaceAbilities(species){
-    const rawReplaceAbilities = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/abilities/duplicate_abilities.h`)
+    const rawReplaceAbilities = await fetch(`./data/abilities/duplicate_abilities.h`)
     const textReplaceAbilities = await rawReplaceAbilities.text()
 
     return await regexReplaceAbilities(textReplaceAbilities, species)
@@ -82,7 +82,7 @@ async function getChanges(species, url){
 
     species = await regexChanges(textChanges, species)
 
-    const rawChangesGen9 = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/gen9data.txt`)
+    const rawChangesGen9 = await fetch(`./data/species/gen9data.txt`)
     const textChangesGen9 = await rawChangesGen9.text()
 
     return await regexChangesGen9(textChangesGen9, species)
