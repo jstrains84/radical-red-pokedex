@@ -187,21 +187,12 @@ function setDataList(){
 
 
 
+
 function getSpeciesSpriteSrc(speciesName){
-    if(sprites[speciesName]){
-        if(sprites[speciesName].length < 500){
-            localStorage.removeItem(speciesName)
-            spriteRemoveBgReturnBase64(speciesName, species)
-            return species[speciesName]["sprite"]
-        }
-        else{
-            return sprites[speciesName]
-        }
+    if(species[speciesName] && species[speciesName]["sprite"]){
+        return `./data/species/frontspr/${species[speciesName]["sprite"].split("/").pop()}`
     }
-    else{
-        spriteRemoveBgReturnBase64(speciesName, species)
-        return species[speciesName]["sprite"]
-    }
+    return ""
 }
 
 
