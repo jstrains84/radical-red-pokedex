@@ -320,7 +320,7 @@ async function regexTMHMLearnsets(textTMHMLearnsets, species, start, end){
                 else if(move === "Drainingkiss")
                     move = "Draining Kiss"
 
-                const rawTMHM = fetch(`https://raw.githubusercontent.com/funnotbun/funnotbun.github.io/main/data/species/tm_compatibility/${count} - ${move}.txt`)
+                const rawTMHM = fetch(`./data/species/tm_compatibility/${count} - ${move}.txt`)
                 .then(promises => {
                     const textTMHM = promises.text()
                     .then(promises => {
@@ -375,7 +375,7 @@ async function regexTutorLearnsets(textTutorLearnsets, species, start, end){
                 count++
 
                 if(filterUnusedTutor.includes(move)){
-                    const rawTutor = fetch(`https://raw.githubusercontent.com/funnotbun/funnotbun.github.io/main/data/species/tutor_compatibility/${count} - ${move}.txt`)
+                    const rawTutor = fetch(`./data/species/tutor_compatibility/${count} - ${move}.txt`)
                     .then(promises => {
                         const textTutor = promises.text()
                         .then(promises => {
