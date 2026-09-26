@@ -14,13 +14,13 @@ async function getBaseStats(species){
 }
 
 async function getLevelUpLearnsets(species){
-    const rawLevelUpLearnsets = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/Learnsets.c`)
+    const rawLevelUpLearnsets = await fetch(`./data/species/Learnsets.c`)
     const textLevelUpLearnsets = await rawLevelUpLearnsets.text()
 
-    const rawLevelUpLearnsetsPointers = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/Learnsets.c`)
+    
     const textLevelUpLearnsetsPointers = await rawLevelUpLearnsetsPointers.text()
 
-
+    const rawLevelUpLearnsetsPointers = await fetch(`./data/species/Learnsets.c`)
     const levelUpLearnsetsConversionTable = await getLevelUpLearnsetsConversionTable(textLevelUpLearnsetsPointers, species)
 
 
