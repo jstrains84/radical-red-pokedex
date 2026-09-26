@@ -46,7 +46,7 @@ async function createSpeciesPanel(name){
     speciesID.innerText = `#${species[name]["ID"]}`
 
     speciesSprite.className = `sprite${name}`
-    speciesSprite.src = getSpeciesSpriteSrc(name)
+    speciesSprite.src = `./data/species/frontspr/${species[name]["sprite"].split("/").pop()}`
 
     speciesType1.innerText = sanitizeString(species[name]["type1"])
     speciesType2.innerText = sanitizeString(species[name]["type2"])
