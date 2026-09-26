@@ -8,7 +8,7 @@ async function getSpecies(species){
 
 
 async function getBaseStats(species){
-    const rawBaseStats = await fetch(`https://raw.githubusercontent.com/${repo}/main/data/species/Base_Stats.c`)
+    const rawBaseStats = await fetch(`./data/species/Base_Stats.c`)
     const textBaseStats = await rawBaseStats.text()
     return await regexBaseStats(textBaseStats, species)
 }
